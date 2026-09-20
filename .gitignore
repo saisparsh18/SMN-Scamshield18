@@ -1,22 +1,35 @@
+# ==========================================
 # Dependencies
+# ==========================================
 node_modules/
 **/node_modules/
+.pnp
+.pnp.js
 
-# Production builds
+# ==========================================
+# Production & Distribution Builds
+# ==========================================
 dist/
 dist-ssr/
 build/
 **/dist/
 **/build/
+*.tsbuildinfo
 
+# ==========================================
 # Environment Variables & Secrets (CRITICAL)
+# ==========================================
 .env
 .env.*
 *.env
-*.local
+**/.env
+**/.env.*
 !.env.example
+!**/.env.example
 
-# Logs
+# ==========================================
+# Logs & Diagnostic Dumps
+# ==========================================
 logs/
 *.log
 npm-debug.log*
@@ -25,12 +38,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Editor & OS files
-.vscode/*
-!.vscode/extensions.json
-.idea/
+# ==========================================
+# OS & IDE System Artifacts
+# ==========================================
 .DS_Store
 Thumbs.db
+.vscode/
+!.vscode/extensions.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj

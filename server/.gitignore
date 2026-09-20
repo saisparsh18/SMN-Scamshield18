@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+*.env
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
